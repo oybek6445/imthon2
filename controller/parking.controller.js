@@ -7,8 +7,10 @@ let bodyShow = (req,res)=>{
 let renderMain = (req,res)=>{
     res.render('index')
 }
-let renderAdmin = (req,res)=>{
-    res.render('admin')
+
+let renderHome = (req,res)=>{
+    let datas = service.data()
+    res.render('home', {datas:datas})
 }
 let writeFile = (req,res)=>{
     let data = req.body
@@ -17,6 +19,6 @@ let writeFile = (req,res)=>{
 module.exports = {
     bodyShow,
     renderMain,
-    renderAdmin,
     writeFile,
+    renderHome
 }

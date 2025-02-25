@@ -7,7 +7,7 @@ let data = ()=>{
 let writeData = (body)=>{
     let data1 = data()
     data1.push(body)
-    fs.writeFileSync('./config/parking.json', JSON.stringify(data1, null), 'utf-8')
+    fs.writeFileSync('./config/parking.json', JSON.stringify(data1, null, 4), 'utf-8')
 }
 
 module.exports = {
